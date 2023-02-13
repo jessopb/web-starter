@@ -10,9 +10,11 @@ const Main = (props: IMainProps) => {
   return (
     <div className="w-full flex flex-col relative min-h-screen">
       {props.meta}
-      <div className="w-full bg-orange-100 grow content">
-        <header className="flex justify-between w-11/12 max-w-screen-lg m-auto">
-          <div className="bg-red-500">hi</div>
+      <div className="w-full bg-orange-100 content h-20">
+        <header className="flex justify-between max-w-screen-lg px-4 m-auto items-center h-full">
+          <div className="bg-red-500 text-white text-xl h-full w-20 flex items-center justify-around">
+            Zeppi
+          </div>
           <nav>
             <ul className="flex flex-wrap text-xl">
               <li className="mr-6">
@@ -28,7 +30,7 @@ const Main = (props: IMainProps) => {
                   href="/"
                   className="border-none text-black hover:text-blue-900"
                 >
-                  Home
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -36,12 +38,10 @@ const Main = (props: IMainProps) => {
         </header>
       </div>
       <div className="w-full">
-        <main className="content py-5 text-xl w-11/12 max-w-screen-lg m-auto">
-          {props.children}
-        </main>
+        <main className="content py-5 text-xl">{props.children}</main>
       </div>
-      <div className="w-full bg-orange-200 absolute bottom-0 ">
-        <footer className="flex justify-between w-11/12 max-w-screen-lg m-auto">
+      <div className="w-full bg-orange-200 absolute bottom-0 px-4 ">
+        <footer className="flex justify-between w-11/12 max-w-screen-lg m-auto h-52">
           bye
         </footer>
       </div>
