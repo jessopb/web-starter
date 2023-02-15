@@ -36,8 +36,8 @@ export default function Home() {
                 eat your heart out.
               </p>
               <div className="flex justify-start items-center gap-4">
-                <CTAButton text="Level Up Now!" />
-                <CTAButton text="Something else..." secondary />
+                <CTAButton text="Level Up Now!" dest="/" />
+                <CTAButton text="Something else..." dest="/" />
               </div>
             </>
           }
@@ -57,8 +57,8 @@ export default function Home() {
                 don't forget your scuba gear and towel.
               </p>
               <div className="flex justify-start items-center gap-4">
-                <CTAButton text="Level Up Now!" />
-                <CTAButton text="Something else..." secondary />
+                <CTAButton text="Level Up Now!" dest="/" />
+                <CTAButton text="Something else..." dest="/" />
               </div>
             </>
           }

@@ -1,12 +1,12 @@
 import React, { ReactNode } from "react";
 import Image from "next/image";
-type S_H_Props = {
+type IHProps = {
   content: ReactNode;
   bgimage?: string;
   image?: string;
 };
 
-export const HeroSection = (props: S_H_Props) => {
+export const HeroSection = (props: IHProps) => {
   const { content, bgimage, image } = props;
 
   return (

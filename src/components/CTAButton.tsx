@@ -2,7 +2,7 @@ import Link from "next/link";
 
 type ICTAProps = {
   text: string;
-  secondary: boolean;
+  secondary?: boolean;
   dest: string;
 };
 export const CTAButton = (props: ICTAProps) => {
