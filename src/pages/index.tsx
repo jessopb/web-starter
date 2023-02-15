@@ -51,9 +51,10 @@ export default function Home() {
                 Some Amazing Headline Will Go Here
               </h1>
               <p className="font-bold">
-                You won't believe how amazing the headline will be. It will have
-                0 friction and bring all the customers to the yard. Milkshakes
-                eat your heart out.
+                *Slaps hood* you can fit so many CTAs in this baby. CTAs with
+                kittens, with whales, with octopodes. Yes, Octopodes. Level up
+                to find even more memes deeper into the tunnel system. Just
+                don't forget your scuba gear and towel.
               </p>
               <div className="flex justify-start items-center gap-4">
                 <CTAButton text="Level Up Now!" />
