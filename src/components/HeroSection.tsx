@@ -1,22 +1,36 @@
-import React from "react";
-
+import React, { ReactNode } from "react";
+import Image from "next/image";
 type S_H_Props = {
-  left: ReactNode;
-  right: ReactNode;
+  content: ReactNode;
+  bgimage?: string;
+  image?: string;
 };
 
 export const HeroSection = (props: S_H_Props) => {
-  const { left, right } = props;
+  const { content, bgimage, image } = props;
+
   return (
-    <section className="white">
-      <div className="flex flex-col-reverse lg:flex-row max-w-screen-lg mx-auto py-20 px-4 ">
-        <div className="lg:w-6/12 lg:pr-4 lg:p-0 p-4 flex flex-col gap-8 items-start">
-          {left}
+    <section className="white relative">
+      <div className="flex flex-col-reverse lg:flex-row max-w-screen-xl mx-auto py-20 px-4 z-10">
+        <div className="lg:pr-4 lg:p-0 p-4 lg:w-full flex flex-col gap-8 items-start m-auto">
+          {content}
         </div>
-        <div className="lg:w-6/12 lg:pl-4 p-4 w-96 lg:w-full relative h-24 object-cover m-auto">
-          {right}
-        </div>
+        {image && (
+          <div className="lg:pl-4 rounded-md w-full p-4 pb-8 flex items-center justify-center">
+            <img className="h-auto max-w-full" src={image}></img>
+          </div>
+        )}
       </div>
+      {bgimage && (
+        <div className="absolute w-full h-full left-0 top-0 right-0 bottom-0 -z-10">
+          <Image
+            src={bgimage}
+            fill
+            alt="decorate"
+            style={{ objectFit: "cover" }}
+          ></Image>
+        </div>
+      )}
     </section>
   );
 };
